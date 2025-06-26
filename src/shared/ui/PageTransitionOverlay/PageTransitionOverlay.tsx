@@ -1,15 +1,17 @@
 'use client'
-import { useTransitionStore } from '@shared/model/transitionStore';
-import styles from './PageTransitionOverlay.module.scss';
+
+import { useTransitionStore } from '@shared/model/transitionStore'
+
+import styles from './PageTransitionOverlay.module.scss'
 
 export const PageTransitionOverlay = () => {
-    const isTransitioning = useTransitionStore(state => state.isTransitioning);
+  const isTransitioning = useTransitionStore((state) => state.isTransitioning)
 
-    if (!isTransitioning) return null;
+  if (!isTransitioning) return null
 
-    return (
-        <div className={styles.overlay}>
-            <div className={styles.spinner} />
-        </div>
-    );
-};
+  return (
+    <div className={styles.overlay}>
+      <div className={styles.spinner} />
+    </div>
+  )
+}

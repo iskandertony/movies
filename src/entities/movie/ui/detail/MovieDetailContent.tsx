@@ -1,6 +1,6 @@
 'use client'
 
-import {useCallback, useEffect} from 'react'
+import { useCallback, useEffect } from 'react'
 
 import { useQuery } from '@tanstack/react-query'
 import { Button } from 'antd'
@@ -12,15 +12,15 @@ import { MovieDetailCard } from '@entities/movie/ui/detail/MovieDetailCard'
 import { MovieDetailSkeleton } from '@entities/movie/ui/detail/MovieDetailSkeleton'
 
 import { usePageParams } from '@shared/hooks/usePageParams'
+import { useTransitionStore } from '@shared/model/transitionStore'
 import { ErrorBlock } from '@shared/ui/ErrorBlock/ErrorBlock'
 
 import styles from './MovieDetailContent.module.scss'
-import {useTransitionStore} from "@shared/model/transitionStore";
 
 export default function MovieDetailContent() {
   const router = useRouter()
   const { id } = useParams<{ id: string }>()
-  const { endTransition } = useTransitionStore.getState();
+  const { endTransition } = useTransitionStore.getState()
   const page = usePageParams()
   const {
     data: movie,
@@ -30,14 +30,13 @@ export default function MovieDetailContent() {
     queryKey: ['movie', id],
     queryFn: () => getMovieById(id),
     enabled: !!id,
-  });
+  })
 
   useEffect(() => {
     if (!isLoading) {
-      endTransition();
+      endTransition()
     }
-  }, [isLoading, endTransition]);
-
+  }, [isLoading, endTransition])
 
   const handleBack = useCallback(() => {
     router.push(`/?page=${page}`)
