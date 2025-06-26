@@ -40,3 +40,13 @@
   color: #444;
   line-height: 1.5;
 }
+
+.background {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 0.5;
+}
