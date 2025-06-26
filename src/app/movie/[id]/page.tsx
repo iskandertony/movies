@@ -2,4 +2,8 @@
 
 import MovieDetailPage from '@views/MovieDetail/page';
 
-export default MovieDetailPage;
+export const dynamic = 'force-dynamic';
+
+export default function MovieDetail() {
+    return <MovieDetailPage />;
+}

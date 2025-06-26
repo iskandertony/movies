@@ -1,3 +1,4 @@
+'use client'
 import { Button } from 'antd'
 
 import styles from './ErrorBlock.module.scss'

@@ -1,3 +1,4 @@
+'use client'
 import { Pagination } from 'antd'
 
 import styles from './MoviePagination.module.scss'

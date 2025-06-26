@@ -1,3 +1,4 @@
+'use client'
 import { memo, useState } from 'react'
 
 import { Skeleton } from 'antd'

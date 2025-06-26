@@ -1,7 +1,14 @@
-'use client'
+'use client';
 
-import HomePage from '@views/Home/page'
+import { Suspense } from 'react';
+import HomePage from '@views/Home/page';
+
+export const dynamic = 'force-dynamic';
 
 export default function Page() {
-  return <HomePage />
+  return (
+      <Suspense fallback={<div>Загрузка...</div>}>
+        <HomePage />
+      </Suspense>
+  );
 }
