@@ -20,7 +20,7 @@ export const MovieList = () => {
   const handleCardClick = useCardClickHandler()
 
   const { data, isError } = useQuery({
-    queryKey: ['movies', query, currentPage],
+    queryKey: ['movies', { query, page: currentPage }],
     queryFn: () => (query ? searchMovies(query, currentPage) : getPopularMovies(currentPage)),
   })
 
