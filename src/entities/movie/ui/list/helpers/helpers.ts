@@ -4,6 +4,8 @@ import { useCallback } from 'react'
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
+import { useTransitionStore } from '@shared/model/transitionStore'
+
 export const usePaginationHandler = () => {
   const router = useRouter()
   const pathname = usePathname()
@@ -27,6 +29,7 @@ export const useCardClickHandler = () => {
 
   const handleCardClick = useCallback(
     (id: number) => {
+      useTransitionStore.getState().startTransition()
       const params = new URLSearchParams(searchParams.toString())
       router.push(`/movie/${id}?${params.toString()}`)
     },
