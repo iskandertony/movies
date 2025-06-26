@@ -13,4 +13,13 @@
   letter-spacing: 2px;
   text-align: center;
   overflow: hidden;
+
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 22px;
+  }
 }

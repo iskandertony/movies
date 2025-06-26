@@ -13,6 +13,7 @@
   max-width: 1000px;
   width: 100%;
   margin-top: 20px;
+  padding: 0 20px;
 }
 
 .poster {
@@ -20,6 +21,14 @@
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    width: 70%;
+  }
+
+  @media (max-width: 480px) {
+    width: 90%;
+  }
 }
 
 .info {
@@ -29,6 +38,8 @@
   flex-direction: column;
   gap: 15px;
   justify-content: center;
+  padding: 20px;
+  color: #fff;
 }
 
 .title {

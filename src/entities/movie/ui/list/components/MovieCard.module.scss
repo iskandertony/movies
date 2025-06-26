@@ -8,6 +8,16 @@
   border-radius: 8px;
   background: #f0f0f0;
   transition: transform 0.3s ease;
+
+  @media (max-width: 768px) {
+    width: 45vw;
+    height: 65vw;
+  }
+
+  @media (max-width: 480px) {
+    width: 90vw;
+    height: 130vw;
+  }
 }
 
 .image {
