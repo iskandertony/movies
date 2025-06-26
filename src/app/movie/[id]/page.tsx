@@ -1,3 +1,5 @@
-import MovieDetailPage from '@views/MovieDetail/page'
+'use client';
 
-export default MovieDetailPage
+import MovieDetailPage from '@views/MovieDetail/page';
+
+export default MovieDetailPage;
