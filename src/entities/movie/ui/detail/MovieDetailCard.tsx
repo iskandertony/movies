@@ -1,3 +1,4 @@
+'use client'
 import { MovieDetail } from '@entities/movie/model/types'
 
 import styles from './MovieDetailCard.module.scss'

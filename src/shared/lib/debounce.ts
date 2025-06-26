@@ -1,3 +1,4 @@
+'use client'
 import { useMemo } from 'react'
 
 export function debounce<T extends (...args: any[]) => void>(func: T, delay: number) {
