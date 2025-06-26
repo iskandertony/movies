@@ -6,9 +6,9 @@
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
     "^react$|^react-dom$|^react(-.*)?$",
-    "^(?!@app|@pages|@widgets|@features|@entities|@shared)(@?\\w)",
+    "^(?!@app|@views|@widgets|@features|@entities|@shared)(@?\\w)",
     "^@(app)(/.*)?$",
-    "^@(pages)(/.*)?$",
+    "^@(views)(/.*)?$",
     "^@(widgets)(/.*)?$",
     "^@features/(.*)$",
     "^@entities/(.*)$",

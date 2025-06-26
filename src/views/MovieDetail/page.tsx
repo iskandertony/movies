@@ -1,12 +1,13 @@
-import { Suspense, lazy } from 'react';
-import { Spin } from 'antd';
+import { Suspense, lazy } from 'react'
 
-const MovieDetailContent = lazy(() => import('./ui/MovieDetailContent'));
+import { Spin } from 'antd'
+
+const MovieDetailContent = lazy(() => import('./ui/MovieDetailContent'))
 
 export default function MovieDetailPage() {
-    return (
-        <Suspense fallback={<Spin size="large" />}>
-            <MovieDetailContent />
-        </Suspense>
-    );
+  return (
+    <Suspense fallback={<Spin size="large" />}>
+      <MovieDetailContent />
+    </Suspense>
+  )
 }
