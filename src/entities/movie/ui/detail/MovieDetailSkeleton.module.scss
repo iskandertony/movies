@@ -1,0 +1,9 @@
+@import './MovieDetailCard.module.scss';
+
+.content {
+  composes: content from './MovieDetailCard.module.scss';
+}
+
+.info {
+  composes: info from './MovieDetailCard.module.scss';
+}

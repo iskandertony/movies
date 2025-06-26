@@ -2,9 +2,9 @@
 
 import { motion } from 'framer-motion'
 
-import { MovieList } from '@widgets/movie-list/ui/MovieList'
-
 import { SearchInput } from '@features/search/ui/SearchInput'
+
+import { MovieList } from '@entities/movie/ui/list/MovieList'
 
 import styles from './Home.module.scss'
 
