@@ -4,6 +4,7 @@ import { Skeleton } from 'antd'
 import { motion } from 'framer-motion'
 
 import styles from './MovieCard.module.scss'
+import {useTransitionStore} from "@shared/model/transitionStore";
 
 interface MovieCardProps {
   id: number
@@ -21,11 +22,16 @@ const cardVariants = {
 
 export const MovieCard = ({ title, posterPath, onClick }: MovieCardProps) => {
   const [imageLoaded, setImageLoaded] = useState(false)
+  const startTransition = useTransitionStore(state => state.startTransition);
 
+  const handleClick = () => {
+    startTransition();
+    onClick?.();
+  };
   return (
     <motion.div
       className={styles.card}
-      onClick={onClick}
+      onClick={handleClick}
       variants={cardVariants}
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}

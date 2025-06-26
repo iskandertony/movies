@@ -1,6 +1,7 @@
 import { TMDB_ENDPOINTS } from '@entities/movie/api/endpoints'
 
 import { axiosInstance } from '@shared/api/axiosInstance'
+import {MovieDetail} from "@entities/movie/model/types";
 
 export const getPopularMovies = async (page = 1) => {
   const response = await axiosInstance.get(TMDB_ENDPOINTS.POPULAR, {
@@ -17,9 +18,7 @@ export const searchMovies = async (query: string, page = 1) => {
   return response.data
 }
 
-export const getMovieById = async (id: string) => {
-  const response = await axiosInstance.get(TMDB_ENDPOINTS.DETAILS(id), {
-    params: { append_to_response: 'credits' },
-  })
-  return response.data
-}
+export const getMovieById = async (id: string): Promise<MovieDetail> => {
+  const response = await axiosInstance.get(`/movie/${id}`);
+  return response.data;
+};
