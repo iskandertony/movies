@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
-import MovieDetailPage from '@views/MovieDetail/page';
+import MovieDetailPage from '@views/MovieDetail/page'
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'
 
 export default function MovieDetail() {
-    return <MovieDetailPage />;
+  return <MovieDetailPage />
 }

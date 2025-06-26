@@ -1,4 +1,5 @@
 'use client'
+
 import { Suspense } from 'react'
 
 import { MovieCardSkeleton } from '@entities/movie/ui/list/components/MovieCardSkeleton'

@@ -1,4 +1,5 @@
-'use client';
+'use client'
+
 import { Suspense, lazy } from 'react'
 
 import { Spin } from 'antd'

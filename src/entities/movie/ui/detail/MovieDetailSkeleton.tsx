@@ -1,4 +1,5 @@
 'use client'
+
 import { Skeleton } from 'antd'
 
 import styles from './MovieDetailSkeleton.module.scss'
